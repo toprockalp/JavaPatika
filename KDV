@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class KDV {
+    public static void main(String[] args) {
+        int price;
+        float lastPrice = 0;
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Ürünün Vergisiz Fiyatını Girin:");
+        price = input.nextInt();
+
+        if (price < 1000 && price > 0)
+            lastPrice = 1.18f * price;
+        else if (price > 1000) {
+            lastPrice = 1.08f * price;
+        }
+
+        System.out.printf("Son Fiyat %.1f",lastPrice);
+
+    }
+}
