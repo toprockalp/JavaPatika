@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+import static java.lang.Math.pow;
+import static java.lang.Math.sqrt;
+
+public class UcgenIslemleri {
+    public static void main(String[] args) {
+        double kenar1, kenar2, hipo, cevre, alan, a=0, u;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("2 kenar uzunluğunu da giriniz");
+        kenar1 = input.nextDouble();
+        kenar2 = input.nextDouble();
+
+        hipo = Math.sqrt(pow(kenar1,2) + pow(kenar2,2));
+        System.out.println("Hipotenüs: " + hipo);
+
+        cevre = kenar1 + kenar2 + hipo;
+        u = cevre / 2;
+        a =  u * (u-kenar1) * (u-kenar2) * (u-hipo);
+        alan = sqrt(a);
+
+        System.out.println("Alan: " + alan);
+    }
+}
